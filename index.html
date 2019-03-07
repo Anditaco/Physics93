@@ -7,19 +7,25 @@
 </head>
 
 <body>
-  <h1> Chapter 10 Problem 93 </h1><br>
+  <h1> Chapter 10 Problem 93 </h1>
+<i>  Colin Christian</i><br>
   <canvas id="canvas" width="300" height="300"></canvas>
   <h2>Disk</h2>
-  M: <input type="double" id="DiskM" value="7.00"><br>
-  R: <input type="double" id="DiskR" value="1.00"><br>
+  Mass: <input type="double" id="DiskM" value="7.00" oninput="calculateW()"> kg<br>
+  Radius: <input type="double" id="DiskR" value="1.00" oninput="calculateW()"> m<br>
   <h2>Train</h2>
-  M: <input type="double" id="TrainM" value="1.20"><br>
-  R: <input type="double" id="TrainR" value=".95"><br>
-  V: <input type="double" id="TrainV" value=".60"><br>
+  Mass: <input type="double" id="TrainM" value="1.20" oninput="calculateW()"> kg<br>
+  Radius: <input type="double" id="TrainR" value=".95" oninput="calculateW()"> m<br>
+  Linear Velocity: <input type="double" id="TrainV" value=".60" oninput="calculateW()"> m/s<br>
 
+<h2>
+    Equation: AngularVelocity = (-I<sub>T</sub>*V<sub>T</sub>/R<sub>T</sub>)/(I<sub>D</sub>+I<sub>T</sub>)
+</h2>
   <h2>
-    Angular Velocity : <input type="double" id="output" readonly></textarea>
+    Calculated Disk Angular Velocity : <input type="double" id="output" readonly></input> rad/s
   </h2>
+
+  <button id="go" onclick="goButton()" value="Go">Go</button>
 </body>
 
 </html>
